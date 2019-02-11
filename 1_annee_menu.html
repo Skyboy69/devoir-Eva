@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<div id="left"></div>
+	<div id="right"></div>
+	<div id="top"></div>
+	<div id="bottom"></div>
+
+	<head>
+	<!-- pour les caracteres speciaux (comme le É) -->
+		<meta charset="utf-8" />
+	<!-- pour changer le positionnement selon la résolution -->	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- pour activer feuille css -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	<!-- titre de l'onglet -->
+		<title>Première Année</title>
+	<!-- icon dans onglet -->
+		<!--<link rel="icon" type="image/pgn" href="image/logo.jpg">-->
+	<!-- pour activer feuille javascript -->	
+		<script language="JavaScript"  type="text/javascript"   src="script_menu_premiere.js"></script>
+	</head>
+	
+	<body onload="load_page(0)">
+	
+		<br/>
+	
+		<header>
+			
+			<table>
+			
+				<tr>
+
+					<td  class="td_menu_25">
+						<a class="a_menu" href="1_annee_menu.html">Menu<br />Principal</a>
+					</td>
+					
+					<td  class="td_menu_50">
+						<h1>Première Année</h1>
+					</td>
+					
+					<td  class="td_menu_25">
+						<h3></h3>
+					</td>
+
+				</tr>
+
+			</table>
+		
+		</header>
+		
+		<br/>
+		
+		<section>
+			
+			<div id="screen_blackboard0">
+				
+					<table class="menu">
+					
+						<tr>
+
+							<td class="td_menu_50">
+								<a onclick="stopRecursiveLoad();load_page(1)">Français</a>
+							</td>
+							
+							<td class="td_menu_50">
+								<a onclick="stopRecursiveLoad();load_page(2)">Mathématique</a>
+							</td>
+
+						</tr>
+						
+						<tr>
+
+							<td class="td_menu_50">
+								<a onclick="stopRecursiveLoad();load_page(3)">Anglais</a>
+							</td>
+							
+							<td class="td_menu_50">
+								<a onclick="stopRecursiveLoad();load_page(4)"></a>
+							</td>
+
+						</tr>
+
+					</table>
+
+			</div>
+			
+			<div id="screen_blackboard1">
+				
+				
+					<table class="menu">
+					
+						<tr>
+
+							<td>
+								<h1 class="underline">Français</h1>
+								<a  href="1_annee_francais_mots_cles
+								.html">Mots clés</a>
+							</td>
+
+						</tr>
+						
+					</table>
+
+			</div>
+			
+			<div id="screen_blackboard2">
+				
+				
+					<table class="menu">
+					
+						<tr>
+
+							<td>
+								<h1 class="underline">Mathématique</h1>
+								<a  href="1_annee_math_addition.html">Addition</a>
+								</br>
+								<a href="1_annee_math_soustraction.html">Soustraction</a>
+								</br>
+								<a href="1_annee_math_reglettes.html">Règlettes</a>
+							</td>
+							
+
+						</tr>
+
+						
+
+					</table>
+
+			</div>
+			
+			<div id="screen_blackboard3">
+				
+				
+					<table class="menu">
+					
+						<tr>
+
+							<td>
+								<h1 class="underline">Anglais</h1>
+								<a  href="1_annee_anglais_colors.html">Colors</a>
+								<br/>
+								<a  href="1_annee_anglais_words.html">Words</a>
+							</td>
+
+						</tr>
+						
+					</table>
+
+			</div>
+			
+		<section>
+		
+		<footer>
+				<h6>
+					By SkyBoy
+				</h6>
+		</footer>
+	
+	</body>
+</html>
