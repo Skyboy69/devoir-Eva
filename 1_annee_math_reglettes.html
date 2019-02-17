@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="fr">
+<html lang="fr" style="background-color:black">
 
 	<div id="left"></div>
 	<div id="right"></div>
@@ -8,6 +8,7 @@
 	<div id="bottom"></div>
 
 	<head>
+
 	<!-- pour les caracteres speciaux (comme le É) -->
 		<meta charset="utf-8" />
 	<!-- pour changer le positionnement selon la résolution -->	
@@ -20,9 +21,12 @@
 		<!--<link rel="icon" type="image/pgn" href="image/logo.jpg">-->
 	<!-- pour activer feuille javascript -->	
 		<script language="JavaScript"  type="text/javascript"   src="script_menu_premiere.js"></script>
+
 	</head>
 	
-	<body onload="load_page(0); load_game_mathReglettes()"
+
+	
+	<body onload="load_page(0); load_game_mathReglettes()">
 	
 		<br/>
 	
@@ -56,7 +60,6 @@
 			
 			<div id="screen_blackboard0">
 				
-				
 					<table class="menu">
 					
 						<tr>
@@ -70,59 +73,57 @@
 							<td rowspan="3" class="no-border">
 							
 							</td>
-							<td rowspan="3" class="border">
+							<td rowspan="3" id="reglette1" class="border" onclick="ajouterReglette10(1);">
 							
 							</td>
-							<td rowspan="3" class="border">
+							<td rowspan="3" id="reglette2" class="border" onclick="ajouterReglette10(2);">
 							
 							</td>
-							<td rowspan="3" class="border">
+							<td rowspan="3" id="reglette3" class="border" onclick="ajouterReglette10(3);">
 							
 							</td>
-							<td rowspan="3" class="border">
+							<td rowspan="3" id="reglette4" class="border" onclick="ajouterReglette10(4);">
 							
 							</td>
-							<td rowspan="3" class="border">
+							<td rowspan="3" id="reglette5" class="border" onclick="ajouterReglette10(5);">
 						
 							</td>
-							<td rowspan="3" class="border">
+							<td rowspan="3" id="reglette6" class="border" onclick="ajouterReglette10(6);">
 							
 							</td>
-							<td rowspan="3" class="border">
+							<td rowspan="3" id="reglette7" class="border" onclick="ajouterReglette10(7);">
 							
 							</td>
-							<td rowspan="3" class="border">
+							<td rowspan="3" id="reglette8" class="border" onclick="ajouterReglette10(8);">
 							
 							</td>
-							<td rowspan="3" class="border">
+							<td rowspan="3" id="reglette9" class="border" onclick="ajouterReglette10(9);">
 							
 							</td>
-							<td class="border">
+							<td id="unite1" class="border" onclick="ajouterunite(1);">
 							
 							</td>
-							<td class="border">
+							<td id="unite2" class="border" onclick="ajouterunite(2);">
 							
 							</td>
-							<td class="border">
+							<td id="unite3" class="border" onclick="ajouterunite(3);">
 							
 							</td>
 							<td rowspan="3" class="no-border">
 							
 							</td>
-							
-							
-							
+
 						</tr>
 						
 						<tr>
 							
-							<td class="border">
+							<td id="unite4" class="border" onclick="ajouterunite(4);">
 							
 							</td>
-							<td class="border">
+							<td id="unite5" class="border" onclick="ajouterunite(5);">
 							
 							</td>
-							<td class="border">
+							<td id="unite6" class="border" onclick="ajouterunite(6);">
 							
 							</td>
 	
@@ -130,13 +131,13 @@
 						
 						<tr>
 							
-							<td class="border">
+							<td id="unite7" class="border" onclick="ajouterunite(7);">
 							
 							</td>
-							<td class="border">
+							<td id="unite8" class="border" onclick="ajouterunite(8);">
 							
 							</td>
-							<td class="border">
+							<td id="unite9" class="border" onclick="ajouterunite(9);">
 							
 							</td>
 	
@@ -145,7 +146,7 @@
 						<tr>
 
 							<td COLSPAN="7" class="td_height_30">
-								<img src="Images/bouton.png" alt="photo bouton" class="photo_center"/>
+								<img src="Images/bouton.png" alt="photo bouton" class="photo_center" onclick="checkAnwserReglette()" />
 							</td>
 							<td COLSPAN="7" class="td_height_30">
 								<h1></h1>

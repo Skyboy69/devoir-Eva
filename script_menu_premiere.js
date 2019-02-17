@@ -66,6 +66,9 @@ var tabAnswer = [];
 
 var idTimer;
 
+var compteurReglette10 = 0;
+var compteurUnite = 0;
+
 function load_page(noBlackBord) {
 		
 	// pour aller chercher la resolution ecran du client "screen.availHeight"
@@ -80,7 +83,6 @@ function load_page(noBlackBord) {
 	displaySubMenu(noBlackBord)
 	
 	recursiveLoad = setTimeout(load_page, 200, noBlackBord);
-
 }
 
 function stopRecursiveLoad(){
@@ -141,8 +143,12 @@ function load_game_mathEquation(signe,min,max,numberDisplay){
 
 function load_game_mathReglettes(){
 	
-	var nombre1 = random(0,100);
+	initialiserCouleurReglette();
+	
+	var nombre1 = random(1,99);
+	
 	afficheNombrePourReglettes(nombre1);
+		
 }
 
 function afficheNombrePourReglettes(nbr1) {
@@ -190,22 +196,20 @@ function verifierEquation(item,min,max,numberDisplay) {
 
 function displayAfterGoodAnswer(goodAnswer) {
 	
-		document.getElementById("div_message_user").style.display = "block";
-		document.getElementById("div_message_user").style.backgroundImage = "url('images/crochet_vert.png')";
-		document.getElementById("div_message_user2").innerHTML = goodAnswer;
-		
-		var son = new Audio('audio/goodAnswer.mp3')
-		son.play();
+	document.getElementById("div_message_user").style.display = "block";
+	document.getElementById("div_message_user").style.backgroundImage = "url('images/crochet_vert.png')";
+	document.getElementById("div_message_user2").innerHTML = goodAnswer;
+	
+	playSoundGoodAnswer()
 }
 
 function displayAfterBadAnswer(goodAnswer) {
 	
-		document.getElementById("div_message_user").style.display = "block";
-		document.getElementById("div_message_user").style.backgroundImage = "url('images/x_rouge.svg')";
-		document.getElementById("div_message_user2").innerHTML = goodAnswer;
+	document.getElementById("div_message_user").style.display = "block";
+	document.getElementById("div_message_user").style.backgroundImage = "url('images/x_rouge.svg')";
+	document.getElementById("div_message_user2").innerHTML = goodAnswer;
 		
-		var son = new Audio('audio/badAnswer.mp3')
-		son.play();
+	playSoundBadAnswer()
 }
 
 function calculEquation(x,y,signe) {
@@ -332,8 +336,6 @@ function checkAnswer(item,min,max,numberDisplay,game) {
 	}
 }
 
-
-
 function nextAnswer (min,max,numberDisplay,game) {
 	
 	switch (game) {
@@ -396,7 +398,6 @@ function creatRandomAnswer(min,max,tab) {
 	}
 }
 
-// pour melanger un tableau
 function mixTabAnswer() {
 	
 	for (var i = tabAnswer.length - 1; i > 0; i--) {
@@ -422,3 +423,90 @@ function notDisplayOfferedChoices(max) {
 		document.getElementById("offeredChoices" + i).innerHTML = "";
 	}
 }
+
+function initialiserCouleurReglette()
+{
+	
+	for(nbr = 1; nbr <= 9; nbr++)
+	{		
+		document.getElementById("reglette" + nbr).style.removeProperty("background-color");
+		document.getElementById("unite" + nbr).style.removeProperty("background-color");		
+	}
+	
+}
+
+function ajouterReglette10(nbr)
+{
+	
+	var couleur = document.getElementById("reglette" + nbr).style.backgroundColor;
+	
+	if(couleur != "red")
+	{			
+		document.getElementById("reglette" + nbr).style.backgroundColor = "Red";
+		compteurReglette10 += 10;
+	}
+	else
+	{
+		document.getElementById("reglette" + nbr).style.backgroundColor = "transparent";
+		compteurReglette10 -= 10;		
+	}
+
+}
+
+function ajouterunite(nbr)
+{
+	
+	var couleur = document.getElementById("unite" + nbr).style.backgroundColor;
+	
+	if(couleur != "green")
+	{			
+		document.getElementById("unite" + nbr).style.backgroundColor = "Green";
+		compteurUnite += 1;
+	}
+	else
+	{
+		document.getElementById("unite" + nbr).style.backgroundColor = "transparent";
+		compteurUnite -= 1;		
+	}
+
+}
+
+function checkAnwserReglette()
+{
+	
+	var answer = document.getElementById("nbr1").innerHTML;
+	
+	if(answer == (compteurReglette10 + compteurUnite))
+	{
+		playSoundGoodAnswer();
+		compteurReglette10 = 0;
+		compteurUnite = 0;
+		setTimeout(load_game_mathReglettes, 2000);		
+	}
+	else
+	{	
+		playSoundBadAnswer();
+		compteurReglette10 = 0;
+		compteurUnite = 0;
+		setTimeout(load_game_mathReglettes, 2000);		
+	}
+		
+}
+
+function playSoundGoodAnswer()
+{
+	var son = new Audio('audio/goodAnswer.mp3')
+	son.play();	
+}
+
+function playSoundBadAnswer()
+{
+	var son = new Audio('audio/badAnswer.mp3')
+	son.play();		
+}
+
+
+
+
+
+
