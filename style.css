@@ -2,7 +2,7 @@
 
 
 @media only screen and (max-width: 1023px) {
-	h1,a { 
+	h1,a{ 
 		font-size: 2.2em;
 	}
 	
@@ -15,6 +15,10 @@
 	.a_menu:hover {
 		font-size: 1.5em;
 	}
+	h3{
+		font-size: 1.6em;
+	}
+
 	
 }
 
@@ -30,6 +34,9 @@
 	}
 	.a_menu:hover {
 		font-size: 2.1em;
+	}
+	h3{
+		font-size: 2.2em;
 	}
 }
 
@@ -91,6 +98,7 @@ header {
 
 table {
 	width: 100%;
+	border-spacing: 10px;
 	height: 130px;
 }
 
@@ -225,7 +233,7 @@ a:hover{
 
 .border
 {
-	border: 1px solid white;
+	border: 3px solid white;	
 	width: 4%;
 	
 }

@@ -66,15 +66,17 @@ var tabAnswer = [];
 
 var idTimer;
 
-var compteurReglette10 = 0;
-var compteurUnite = 0;
+var buttom = false;
+
+var numberGoodAnswer = 0;
+var numberTotalAnswer = 0;
 
 function load_page(noBlackBord) {
 		
 	// pour aller chercher la resolution ecran du client "screen.availHeight"
 	// et creer un div selon la resolution de la fenetre
 
-	var hauteurBlackboard = (window.innerHeight - 235) + 'px';
+	var hauteurBlackboard = (window.innerHeight - 245) + 'px';
 
 	var nombreBlackboard = calculNombreBlackboardPage();
 
@@ -148,6 +150,8 @@ function load_game_mathReglettes(){
 	var nombre1 = random(1,99);
 	
 	afficheNombrePourReglettes(nombre1);
+	
+	buttom = false;
 		
 }
 
@@ -185,10 +189,19 @@ function verifierEquation(item,min,max,numberDisplay) {
 		
 		displayAfterGoodAnswer(reponseEquation)
 		
+		numberGoodAnswer ++; 
+		numberTotalAnswer ++;
+		
+		afficheNumberGoodAnswer();
+		
 		setTimeout(load_game_mathEquation, 2000, signe,min,max,numberDisplay);
 	}else {
 
 		displayAfterBadAnswer(reponseEquation)
+		 
+		numberTotalAnswer ++;
+			
+		afficheNumberGoodAnswer();
 		
 		setTimeout(load_game_mathEquation, 2000, signe,min,max,numberDisplay);
 	}	
@@ -327,11 +340,22 @@ function checkAnswer(item,min,max,numberDisplay,game) {
 	if (reponseUser == answer.name) {
 		
 		displayAfterGoodAnswer(answer.name);
+		
+		numberGoodAnswer ++; 
+		numberTotalAnswer ++;
+		
+		afficheNumberGoodAnswer();
+		
 		nextAnswer(min,max,numberDisplay,game);
 		
 	}else {
 		
 		displayAfterBadAnswer(answer.name);
+		 
+		numberTotalAnswer ++;
+		
+		afficheNumberGoodAnswer();
+		
 		nextAnswer(min,max,numberDisplay,game)
 	}
 }
@@ -431,8 +455,7 @@ function initialiserCouleurReglette()
 	{		
 		document.getElementById("reglette" + nbr).style.removeProperty("background-color");
 		document.getElementById("unite" + nbr).style.removeProperty("background-color");		
-	}
-	
+	}	
 }
 
 function ajouterReglette10(nbr)
@@ -440,17 +463,14 @@ function ajouterReglette10(nbr)
 	
 	var couleur = document.getElementById("reglette" + nbr).style.backgroundColor;
 	
-	if(couleur != "red")
+	if(couleur != "orangered")
 	{			
-		document.getElementById("reglette" + nbr).style.backgroundColor = "Red";
-		compteurReglette10 += 10;
+		document.getElementById("reglette" + nbr).style.backgroundColor = "orangered";
 	}
 	else
 	{
-		document.getElementById("reglette" + nbr).style.backgroundColor = "transparent";
-		compteurReglette10 -= 10;		
+		document.getElementById("reglette" + nbr).style.backgroundColor = "transparent";		
 	}
-
 }
 
 function ajouterunite(nbr)
@@ -458,39 +478,50 @@ function ajouterunite(nbr)
 	
 	var couleur = document.getElementById("unite" + nbr).style.backgroundColor;
 	
-	if(couleur != "green")
+	if(couleur != "white")
 	{			
-		document.getElementById("unite" + nbr).style.backgroundColor = "Green";
-		compteurUnite += 1;
+		document.getElementById("unite" + nbr).style.backgroundColor = "White";
 	}
 	else
 	{
-		document.getElementById("unite" + nbr).style.backgroundColor = "transparent";
-		compteurUnite -= 1;		
+		document.getElementById("unite" + nbr).style.backgroundColor = "transparent";	
 	}
-
 }
 
 function checkAnwserReglette()
 {
 	
-	var answer = document.getElementById("nbr1").innerHTML;
-	
-	if(answer == (compteurReglette10 + compteurUnite))
+	if(buttom == false)
 	{
-		playSoundGoodAnswer();
-		compteurReglette10 = 0;
-		compteurUnite = 0;
-		setTimeout(load_game_mathReglettes, 2000);		
-	}
-	else
-	{	
-		playSoundBadAnswer();
-		compteurReglette10 = 0;
-		compteurUnite = 0;
-		setTimeout(load_game_mathReglettes, 2000);		
-	}
+		buttom = true;
+		var answer = document.getElementById("nbr1").innerHTML;
+		var rep = 0
 		
+		rep = reponseUserReglette();
+		
+		if(answer == rep)
+		{
+			numberGoodAnswer ++; 
+			numberTotalAnswer ++;
+			
+			afficheNumberGoodAnswer();
+			
+			playSoundGoodAnswer();
+			setTimeout(load_game_mathReglettes, 2000);			
+		}
+		else
+		{
+			
+			numberTotalAnswer ++;
+			
+			afficheNumberGoodAnswer();
+			
+			playSoundBadAnswer();
+			setTimeout(load_game_mathReglettes, 2000);			
+		}
+			
+	}
+			
 }
 
 function playSoundGoodAnswer()
@@ -505,8 +536,34 @@ function playSoundBadAnswer()
 	son.play();		
 }
 
+function reponseUserReglette()
+{
+	var rep = 0
+	
+	for(nbr = 1; nbr <= 9; nbr++)
+	{		
+		var couleurDizaine = document.getElementById("reglette" + nbr).style.backgroundColor;
+	
+		if(couleurDizaine == "orangered")
+		{
+			rep +=10;			
+		}
+		
+		var couleurUnite = document.getElementById("unite" + nbr).style.backgroundColor;
+	
+		if(couleurUnite == "white")
+		{
+			rep +=1;			
+		}				
+	}	
+	return rep;	
+}
 
-
+function afficheNumberGoodAnswer()
+{
+	document.getElementById("compteurGoodAnswer").innerHTML = numberGoodAnswer +"/"+numberTotalAnswer;
+	
+}
 
 
 
