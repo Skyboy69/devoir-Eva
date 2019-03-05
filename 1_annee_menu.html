@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="fr" style="background-color:black">
 
@@ -22,7 +22,7 @@
 		<script language="JavaScript"  type="text/javascript"   src="script_menu_premiere.js"></script>
 	</head>
 	
-	<body onload="load_page(0)">
+	<body ondragstart="return false;" ondrop="return false;" onload="load_page(0)">
 	
 		<br/>
 	
@@ -61,11 +61,11 @@
 						<tr>
 
 							<td class="td_menu_50">
-								<a onclick="stopRecursiveLoad();load_page(1)">Français</a>
+								<a onclick="stopRecursiveLoad(); load_page(1)">Français</a>
 							</td>
 							
 							<td class="td_menu_50">
-								<a onclick="stopRecursiveLoad();load_page(2)">Mathématique</a>
+								<a onclick="stopRecursiveLoad(); load_page(2)">Mathématique</a>
 							</td>
 
 						</tr>
@@ -73,11 +73,11 @@
 						<tr>
 
 							<td class="td_menu_50">
-								<a onclick="stopRecursiveLoad();load_page(3)">Anglais</a>
+								<a onclick="stopRecursiveLoad(); load_page(3)">Anglais</a>
 							</td>
 							
 							<td class="td_menu_50">
-								<a onclick="stopRecursiveLoad();load_page(4)"></a>
+								<a onclick="stopRecursiveLoad(); load_page(4)"></a>
 							</td>
 
 						</tr>
@@ -89,19 +89,36 @@
 			<div id="screen_blackboard1">
 				
 				
-					<table class="menu">
-					
-						<tr>
+                <table class="menu">
 
-							<td>
-								<h1 class="underline">Français</h1>
-								<a  href="1_annee_francais_mots_cles
-								.html">Mots clés</a>
-							</td>
+                    <tr>
 
-						</tr>
-						
-					</table>
+                        <td colspan=2 class="td_menu_height_30">
+                            <h1 class="underline">Français</h1>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td class="td_menu_50 text_top">
+                            <h1 class="underline">Orthographe</h1>
+                            </br>
+                            <a href="1_annee_francais_mots_cles.html">Mots étiquettes</a>
+                            </br>
+
+                        </td>
+
+                        <td class="td_menu_50 text_top">
+                            <h1 class="underline">Lettres</h1>
+                            </br>
+                            <a href="1_annee_francais_lettreAvantApres.html">Lettre avant ou après</a>
+
+                        </td>
+                    </tr>
+
+                </table>
 
 			</div>
 			
@@ -112,17 +129,33 @@
 					
 						<tr>
 
-							<td>
+							<td colspan=2 >
 								<h1 class="underline">Mathématique</h1>
-								<a  href="1_annee_math_addition.html">Addition</a>
-								</br>
-								<a href="1_annee_math_soustraction.html">Soustraction</a>
-								</br>
-								<a href="1_annee_math_reglettes.html">Réglettes</a>
+
 							</td>
 							
 
 						</tr>
+
+                        <tr>
+                            <td class="td_menu_50 text_top">
+                                <a href="1_annee_math_addition.html">Addition</a>
+                                </br>
+                                <a href="1_annee_math_soustraction.html">Soustraction</a>
+                                </br>
+                                <a href="1_annee_math_reglettes.html">Réglettes</a>
+                                </br>
+                            </td>
+
+                            <td class="td_menu_50 text_top">
+                                <a href="1_annee_math_PlusGrandPlusPetitEgal.html">  < > = </a>
+                                </br>
+                                <a href="1_annee_math_croissant.html"> Ordre croissant</a>
+                                </br>
+                                <a href="1_annee_math_decroissant.html"> Ordre décroissant</a>
+                                </br>
+                            </td>
+                        </tr>
 
 						
 
@@ -139,18 +172,24 @@
 
 							<td>
 								<h1 class="underline">Anglais</h1>
-								<a  href="1_annee_anglais_colors.html">Colors</a>
-								<br/>
-								<a  href="1_annee_anglais_words.html">Words</a>
+
 							</td>
 
 						</tr>
+
+                        <tr>
+                            <td class="text_top">
+                                <a href="1_annee_anglais_colors.html">Colors</a>
+                                <br />
+                                <a href="1_annee_anglais_words.html">Words</a>
+                            </td>
+                        </tr>
 						
 					</table>
 
 			</div>
 			
-		<section>
+		</section>
 		
 		<footer>
 				<h6>

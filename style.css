@@ -5,7 +5,10 @@
 	h1,a{ 
 		font-size: 2.2em;
 	}
-	
+	h2
+	{
+		font-size: 2.2em;
+	}
 	a:hover{
 		font-size : 2.4em; 
 	}
@@ -24,6 +27,11 @@
 
 @media only screen and (min-width: 1024px) {
 	h1,a { 
+		font-size: 2.8em;
+	}
+	
+	h2
+	{
 		font-size: 2.8em;
 	}
 	a:hover{
@@ -110,15 +118,17 @@ h1,a {
 	text-decoration: none;
 }
 
-/*h2 {
+h2 {
 	text-align: center;
 	color: rgb(250, 250, 250);
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	font-style: italic;
-}*/
+}
 
 h3{
 	color: white;
+	margin-right: 8%;
+	float: right;
 }
 
 h6 {
@@ -140,8 +150,7 @@ a:hover{
 	cursor: pointer;
 }
 
-#screen_blackboard0,#screen_blackboard1,#screen_blackboard2,#screen_blackboard3 {
-	
+#screen_blackboard0,#screen_blackboard1,#screen_blackboard2,#screen_blackboard3 {	
 	margin-left: 5%;
 	margin-right: 5%;
 	background-image: url("images/blackboard.png");
@@ -161,6 +170,18 @@ a:hover{
 .td_menu_10{
 	width: 10%;
 	height:50%;
+	
+}
+
+.td_menu_w10_h30{
+	width: 10%;
+	height:30%;
+	
+}
+
+.td_menu_w50_h30 {
+    width: 50%;
+    height: 30%;
 }
 
 .td_menu_25{
@@ -168,13 +189,33 @@ a:hover{
 	height: 50%;
 }
 
+.td_menu_w25_h30{
+	width: 25%;
+	height: 30%;
+}
+
 .td_menu_30{
 	width: 30%;
 	height: 50%;
 }
 
+.td_menu_45{
+	width: 45%;
+	height: 50%;
+}
+
 .td_menu_50{
 	width: 50%;
+}
+
+.td_menu_70 {
+    width: 70%;
+    height: 50%;
+}
+
+.td_menu_height_30
+{
+    height: 30%;
 }
 
 
@@ -187,6 +228,12 @@ a:hover{
 	padding: 1%;
 }
 
+
+.padding
+{
+	padding: 1%;
+	
+}
 
 .text_top {
 	vertical-align: top;
@@ -219,6 +266,16 @@ a:hover{
 
 }
 
+.picture {
+
+	width: 25%;
+    height: 50%;
+	background-size: 100% 100%;
+    margin: auto;
+	opacity: 0.95;
+
+}
+
 .underline {
 	text-decoration: underline;
 }
@@ -234,8 +291,7 @@ a:hover{
 .border
 {
 	border: 3px solid white;	
-	width: 4%;
-	
+	width: 4%;	
 }
 
 .no-border
@@ -254,5 +310,33 @@ a:hover{
     /*margin: auto;*/
 	width: 10%;
 
+}
+
+.texteLeft
+{
+	text-align: left;
+	
+}
+
+.texteRight
+{
+	text-align: right;
+	
+}
+
+.caseDrop
+{
+	border: 3px solid white;
+	width: 90%;
+	height: 55%;
+	margin: auto;
+
+}
+
+.caseDrag {
+    //border: 3px solid white;
+    width: 90%;
+    height: 55%;
+    margin: auto;
 }
 

@@ -5,59 +5,59 @@ var structureGameElement = {
 
 //tab pour choix de couleur pour jeux association de couleur en anglais
 var tabColors = [
-					{name: "Red",tag: "Crimson"},
-					{name: "Pink",tag: "hotpink"},
-					{name: "Blue",tag: "DodgerBlue"},
-					{name: "Green",tag: "LimeGreen"},
-					{name: "White",tag: "white"},
-					{name: "Orange",tag: "Orange"},
-					{name: "Purple",tag: "purple"},
-					{name: "Gray",tag: "gray"},	
+					{name: "Red",     tag: "Crimson"},
+					{name: "Pink",    tag: "hotpink"},
+					{name: "Blue",    tag: "DodgerBlue"},
+					{name: "Green",   tag: "LimeGreen"},
+					{name: "White",   tag: "white"},
+					{name: "Orange",  tag: "Orange"},
+					{name: "Purple",  tag: "purple"},
+					{name: "Gray",    tag: "gray"},	
 				];
 
 var tabMotsCles = [
-					{name: "fille",tag: 'url(images/mots/fille.gif)'},
-					{name: "bébé",tag: 'url(images/mots/bebe.png)'},
-					{name: "ballon",tag: 'url(images/mots/ballon.jpg)'},
-					{name: "fleur",tag: 'url(images/mots/fleur.jpeg)'},
-					{name: "garçon",tag: 'url(images/mots/garcon.gif)'},
-					{name: "pomme",tag: 'url(images/mots/pomme.png)'},
-					{name: "arbre",tag: 'url(images/mots/arbre.png)'},
-					{name: "classe",tag: 'url(images/mots/classe.png)'},
-					{name: "chien",tag: 'url(images/mots/chien.png)'},
-					{name: "chat",tag: 'url(images/mots/chat.png)'},
-					{name: "école",tag: 'url(images/mots/ecole.png)'},
-					{name: "un",tag: 'url(images/mots/un.png)'},
-					{name: "deux",tag: 'url(images/mots/deux.png)'},
-					{name: "trois",tag: 'url(images/mots/trois.png)'},
-					{name: "quatre",tag: 'url(images/mots/quatre.png)'},
-					{name: "neige",tag: 'url(images/mots/neige.png)'},
-					{name: "maison",tag: 'url(images/mots/maison.png)'},
-					{name: "orange",tag: 'url(images/mots/orange.png)'},
-					{name: "livre",tag: 'url(images/mots/livre.png)'},
+					{name: "fille",       tag: 'url(images/mots/fille.gif)'},
+					{name: "bébé",        tag: 'url(images/mots/bebe.png)'},
+					{name: "ballon",      tag: 'url(images/mots/ballon.jpg)'},
+					{name: "fleur",       tag: 'url(images/mots/fleur.jpeg)'},
+					{name: "garçon",      tag: 'url(images/mots/garcon.gif)'},
+					{name: "pomme",       tag: 'url(images/mots/pomme.png)'},
+					{name: "arbre",       tag: 'url(images/mots/arbre.png)'},
+					{name: "classe",      tag: 'url(images/mots/classe.png)'},
+					{name: "chien",       tag: 'url(images/mots/chien.png)'},
+					{name: "chat",        tag: 'url(images/mots/chat.png)'},
+					{name: "école",       tag: 'url(images/mots/ecole.png)'},
+					{name: "un",          tag: 'url(images/mots/un.png)'},
+					{name: "deux",        tag: 'url(images/mots/deux.png)'},
+					{name: "trois",       tag: 'url(images/mots/trois.png)'},
+					{name: "quatre",      tag: 'url(images/mots/quatre.png)'},
+					{name: "neige",       tag: 'url(images/mots/neige.png)'},
+					{name: "maison",      tag: 'url(images/mots/maison.png)'},
+					{name: "orange",      tag: 'url(images/mots/orange.png)'},
+					{name: "livre",       tag: 'url(images/mots/livre.png)'},
 				  ];
 				  
 
 var tabWords = [
-					{name: "girl",tag: 'url(images/mots/fille.gif)'},
-					{name: "baby",tag: 'url(images/mots/bebe.png)'},
-					{name: "ball",tag: 'url(images/mots/ballon.jpg)'},
-					{name: "flower",tag: 'url(images/mots/fleur.jpeg)'},
-					{name: "boy",tag: 'url(images/mots/garcon.gif)'},
-					{name: "apple",tag: 'url(images/mots/pomme.png)'},
-					{name: "tree",tag: 'url(images/mots/arbre.png)'},
-					{name: "class",tag: 'url(images/mots/classe.png)'},
-					{name: "dog",tag: 'url(images/mots/chien.png)'},
-					{name: "cat",tag: 'url(images/mots/chat.png)'},
-					{name: "school",tag: 'url(images/mots/ecole.png)'},
-					{name: "one",tag: 'url(images/mots/un.png)'},
-					{name: "two",tag: 'url(images/mots/deux.png)'},
-					{name: "three",tag: 'url(images/mots/trois.png)'},
-					{name: "four",tag: 'url(images/mots/quatre.png)'},
-					{name: "snow",tag: 'url(images/mots/neige.png)'},
-					{name: "house",tag: 'url(images/mots/maison.png)'},
-					{name: "orange",tag: 'url(images/mots/orange.png)'},
-					{name: "book",tag: 'url(images/mots/livre.png)'},
+					{name: "girl",        tag: 'url(images/mots/fille.gif)'},
+					{name: "baby",        tag: 'url(images/mots/bebe.png)'},
+					{name: "ball",        tag: 'url(images/mots/ballon.jpg)'},
+					{name: "flower",      tag: 'url(images/mots/fleur.jpeg)'},
+					{name: "boy",         tag: 'url(images/mots/garcon.gif)'},
+					{name: "apple",       tag: 'url(images/mots/pomme.png)'},
+					{name: "tree",        tag: 'url(images/mots/arbre.png)'},
+					{name: "class",       tag: 'url(images/mots/classe.png)'},
+					{name: "dog",         tag: 'url(images/mots/chien.png)'},
+					{name: "cat",         tag: 'url(images/mots/chat.png)'},
+					{name: "school",      tag: 'url(images/mots/ecole.png)'},
+					{name: "one",         tag: 'url(images/mots/un.png)'},
+					{name: "two",         tag: 'url(images/mots/deux.png)'},
+					{name: "three",       tag: 'url(images/mots/trois.png)'},
+					{name: "four",        tag: 'url(images/mots/quatre.png)'},
+					{name: "snow",        tag: 'url(images/mots/neige.png)'},
+					{name: "house",       tag: 'url(images/mots/maison.png)'},
+					{name: "orange",      tag: 'url(images/mots/orange.png)'},
+					{name: "book",        tag: 'url(images/mots/livre.png)'},
 				  ];
 				  
 var answer = "";				
@@ -103,7 +103,6 @@ function afficheBlackboard(hauteur, max) {
 	
 	for (i = 0; i < max; i++) {
 	document.getElementById("screen_blackboard" + i).style.height = hauteur;
-
 	}	
 }
 
@@ -113,8 +112,7 @@ function displaySubMenu(nbr) {
 	
 	clearScreenBlackboard(nombre_blackboard);
 	
-	document.getElementById("screen_blackboard" + nbr).style.display = "block";
-	
+	document.getElementById("screen_blackboard" + nbr).style.display = "block";	
 }
 
 function clearScreenBlackboard(max) {
@@ -153,6 +151,99 @@ function load_game_mathReglettes(){
 	
 	buttom = false;
 		
+}
+
+function load_game_mathPlusPetitPlusGranEgal(min,max,numberDisplay)
+{
+	clearDivMessageUser();
+	
+    var nombre1 = random(min,max);
+	
+    var nombre2 = random(min,max);
+	
+	afficheNombre(nombre1, nombre2);
+	
+	displayAnswer(numberDisplay);
+	
+}
+
+function load_game_mathCroissant(min,max)
+{
+		
+	createBaliseHTMLForNumberCroissant();
+	
+	clearDivMessageUser2();
+	
+	creatTabAnswerNumber(min,max)
+		
+	AfficherNombreCroissant();
+	
+}
+
+function creatTabAnswerNumber(min,max) {
+
+	tabAnswer = [];
+	
+	tabAnswer.push(random(min,max));
+			
+	for (i=1; i<5; i++) {
+		
+		creatRandomAnswerNumber(min,max);
+	}
+}
+
+function creatRandomAnswerNumber(min,max) {
+	
+	var flag = false;
+
+	var numberRandom = random(min,max);
+	
+	for(i = 0; i<tabAnswer.length; i++){
+
+		if (numberRandom == tabAnswer[i]) {
+			
+			flag = true;		
+		}
+	}
+	
+	if (flag == true) {
+		
+		creatRandomAnswerNumber(min,max);
+	} else {
+		
+		tabAnswer.push(numberRandom);
+	}
+}
+
+function createBaliseHTMLForNumberCroissant()
+{
+	
+	document.getElementById('ligne1').innerHTML = '<td class="td_menu_w25_h30"></td>'+
+												  '<td class="td_menu_w10_h30"><div class="caseDrag" id="div1" ondrop="drop(event)"ondragover="allowDrop(event)"><h2 id="drag1" draggable="true" ondragstart="drag(event)"></h2></div></td>'+
+												  '<td class="td_menu_w10_h30"><div class="caseDrag" id="div2" ondrop="drop(event)"ondragover="allowDrop(event)"><h2 id="drag2" draggable="true" ondragstart="drag(event)"></h2></div></td>'+
+												  '<td class="td_menu_w10_h30"><div class="caseDrag" id="div3" ondrop="drop(event)"ondragover="allowDrop(event)"><h2 id="drag3" draggable="true" ondragstart="drag(event)"></h2></div></td>'+
+												  '<td class="td_menu_w10_h30"><div class="caseDrag" id="div4" ondrop="drop(event)"ondragover="allowDrop(event)"><h2 id="drag4" draggable="true" ondragstart="drag(event)"></h2></div></td>'+
+												  '<td class="td_menu_w10_h30"><div class="caseDrag" id="div5" ondrop="drop(event)"ondragover="allowDrop(event)"><h2 id="drag5" draggable="true" ondragstart="drag(event)"></h2></div></td>'+
+												  '<td class="td_menu_w25_h30"></td>';
+												  
+	document.getElementById('ligne2').innerHTML = '<td class="td_menu_25"></td>'+
+												  '<td class="td_menu_10 "><div class="caseDrop" id="divAnswer1" ondrop="drop(event)"ondragover="allowDrop(event)"></div></td>'+
+											      '<td class="td_menu_10 "><div class="caseDrop" id="divAnswer2" ondrop="drop(event)"ondragover="allowDrop(event)"></div></td>'+
+												  '<td class="td_menu_10 "><div class="caseDrop" id="divAnswer3" ondrop="drop(event)"ondragover="allowDrop(event)"></div></td>'+
+												  '<td class="td_menu_10 "><div class="caseDrop" id="divAnswer4" ondrop="drop(event)"ondragover="allowDrop(event)"></div></td>'+
+												  '<td class="td_menu_10 "><div class="caseDrop" id="divAnswer5" ondrop="drop(event)"ondragover="allowDrop(event)"></div></td>'+							
+												  '<td class="td_menu_25"><div id="div_message_user"></div></td>';											  
+}
+
+function AfficherNombreCroissant()
+{
+	
+	document.getElementById("drag1").innerHTML = tabAnswer[0];
+	document.getElementById("drag2").innerHTML = tabAnswer[1];
+	document.getElementById("drag3").innerHTML = tabAnswer[2];
+	document.getElementById("drag4").innerHTML = tabAnswer[3];
+    document.getElementById("drag5").innerHTML = tabAnswer[4];
+	
 }
 
 function afficheNombrePourReglettes(nbr1) {
@@ -205,6 +296,61 @@ function verifierEquation(item,min,max,numberDisplay) {
 		
 		setTimeout(load_game_mathEquation, 2000, signe,min,max,numberDisplay);
 	}	
+}
+
+function verifierPluspetitPLusGrandEgal(reponseUser,min,max,numberDisplay)
+{
+
+    var nbr1 = parseInt(document.getElementById("nbr1").innerHTML);
+    var nbr2 = parseInt(document.getElementById("nbr2").innerHTML);
+	
+	clearAnswer(numberDisplay);
+	
+	var reelAnswer = trouverReponsePlusPetitPlusGrandEgale(nbr1,nbr2);
+
+	if(reponseUser == reelAnswer)
+	{
+		
+		displayAfterGoodAnswer(reelAnswer)
+		
+		numberGoodAnswer ++; 
+		numberTotalAnswer ++;
+		
+		afficheNumberGoodAnswer();
+		
+		setTimeout(load_game_mathPlusPetitPlusGranEgal, 2000, min,max,numberDisplay);
+	}
+	else
+	{
+		
+		displayAfterBadAnswer(reelAnswer)
+		 
+		numberTotalAnswer ++;
+			
+		afficheNumberGoodAnswer();
+		
+		setTimeout(load_game_mathPlusPetitPlusGranEgal, 2000, min,max,numberDisplay);		
+	}	
+}
+
+function trouverReponsePlusPetitPlusGrandEgale(nbr1,nbr2)
+{
+	var symbole;
+	
+	if(nbr1 == nbr2)
+	{
+		symbole = "=";
+	}
+	else if (nbr1 < nbr2)
+	{
+		symbole = "<";
+	}
+	else
+	{
+		symbole = ">";
+	}
+	
+	return symbole;
 }
 
 function displayAfterGoodAnswer(goodAnswer) {
@@ -261,8 +407,15 @@ function displayAnswer(i) {
 }
 
 function clearDivMessageUser() {
+	
 	document.getElementById("div_message_user").style.display = "none";	
 	document.getElementById("div_message_user2").innerHTML = "";
+}
+
+function clearDivMessageUser2() {
+	
+	document.getElementById("div_message_user").style.display = "none";	
+	
 }
 
 function loadGameEnglishColors(min,max,numberDisplay) {
@@ -300,9 +453,66 @@ function loadGameFrancaisMotsCles(min,max,numberDisplay) {
 	
 	displayAnswer(numberDisplay);
 	
-	displayOfferedChoices(3);
-	
-	
+	displayOfferedChoices(3);	
+}
+
+function load_game_lettreAvantApres(numberDisplay) {
+
+    clearDivMessageUser();
+
+    var random_ascii = Math.floor((Math.random() * 25) + 97);
+    var lettre = String.fromCharCode(random_ascii);
+
+
+    answer = String.fromCharCode(random_ascii+1);
+
+    document.getElementById("lettre").innerHTML = "Quelle est la lettre après : " + lettre;
+
+    creatTabAnswerletters(answer,lettre);
+
+    mixTabAnswer();
+
+    displayAnswer(numberDisplay);
+
+    displayOfferedChoicesLetters(5);
+
+}
+
+function creatTabAnswerletters(answer, lettre) {
+
+    tabAnswer = [];
+
+    tabAnswer.push(answer);
+
+    for (i = 1; i < 6; i++) {
+
+        creatRandomAnswerLetters(lettre);
+    }
+}
+
+function creatRandomAnswerLetters(lettre) {
+
+    var flag = false;
+
+    var elementRandom = Math.floor((Math.random() * 25) + 97);
+
+    element = String.fromCharCode(elementRandom);
+
+    for (i = 0; i < tabAnswer.length; i++) {
+
+        if (element == tabAnswer[i] || element == lettre) {
+
+            flag = true;
+        }
+    }
+
+    if (flag == true) {
+
+        creatRandomAnswerLetters(lettre);
+    } else {
+
+        tabAnswer.push(element);
+    }
 }
 
 function loadGameAnglaisWords(min,max,numberDisplay) {
@@ -329,6 +539,43 @@ function displayPicture(nbr,tab){
 	element = tab[nbr];
 	
 	document.getElementById("picture").style.backgroundImage = element.tag;
+}
+
+function checkAnswerLetters(item, numberDisplay)
+{
+    var reponseUser = item.innerHTML;
+
+    clearAnswer(numberDisplay);
+
+    if (reponseUser == answer) {
+
+        document.getElementById("lettre").innerHTML = "";
+
+        var message = "Bravo!  La lettre rechercher était bien " + answer;
+
+        displayAfterGoodAnswer(message);
+
+        numberGoodAnswer++;
+        numberTotalAnswer++;
+
+        afficheNumberGoodAnswer();
+
+        setTimeout(load_game_lettreAvantApres, 3000, numberDisplay);
+
+    } else {
+
+        document.getElementById("lettre").innerHTML = "";
+
+        var message = "Désolé!  La lettre rechercher était " + answer;
+
+        displayAfterBadAnswer(message);
+
+        numberTotalAnswer++;
+
+        afficheNumberGoodAnswer();
+
+        setTimeout(load_game_lettreAvantApres, 3000, numberDisplay);
+    }
 }
 
 function checkAnswer(item,min,max,numberDisplay,game) {
@@ -363,16 +610,15 @@ function checkAnswer(item,min,max,numberDisplay,game) {
 function nextAnswer (min,max,numberDisplay,game) {
 	
 	switch (game) {
-	case "anglais_colors":
-	
+	case "anglais_colors":	
 		setTimeout(loadGameEnglishColors, 2000, min,max,numberDisplay);
-		break;
-	case "mots_cles":
-		
+        break;
+
+	case "mots_cles":		
 		setTimeout(loadGameFrancaisMotsCles, 2000, min,max,numberDisplay);
-		break;
-	case "words":
-		
+        break;
+
+	case "words":		
 		setTimeout(loadGameAnglaisWords, 2000, min,max,numberDisplay);
 		break;		
 	}
@@ -439,6 +685,13 @@ function displayOfferedChoices(max) {
 	for (i = 0; i <= max; i++) {
 		document.getElementById("offeredChoices" + i).innerHTML = tabAnswer[i].name;
 	}
+}
+
+function displayOfferedChoicesLetters(max) {
+
+    for (i = 0; i <= max; i++) {
+        document.getElementById("offeredChoices" + i).innerHTML = tabAnswer[i];
+    }
 }
 
 function notDisplayOfferedChoices(max) {
@@ -510,18 +763,15 @@ function checkAnwserReglette()
 			setTimeout(load_game_mathReglettes, 2000);			
 		}
 		else
-		{
-			
+		{			
 			numberTotalAnswer ++;
 			
 			afficheNumberGoodAnswer();
 			
 			playSoundBadAnswer();
 			setTimeout(load_game_mathReglettes, 2000);			
-		}
-			
-	}
-			
+		}			
+	}			
 }
 
 function playSoundGoodAnswer()
@@ -561,9 +811,143 @@ function reponseUserReglette()
 
 function afficheNumberGoodAnswer()
 {
-	document.getElementById("compteurGoodAnswer").innerHTML = numberGoodAnswer +"/"+numberTotalAnswer;
+    document.getElementById("compteurGoodAnswer").innerHTML = numberGoodAnswer + "/" + numberTotalAnswer;
+    
+}
+
+function checkAnwserCroissantDecroissant(min, max, game)
+{
+	var nombre1 = parseInt(document.getElementById("divAnswer1").innerText);
+	var nombre2 = parseInt(document.getElementById("divAnswer2").innerText);
+	var nombre3 = parseInt(document.getElementById("divAnswer3").innerText);
+	var nombre4 = parseInt(document.getElementById("divAnswer4").innerText);
+    var nombre5 = parseInt(document.getElementById("divAnswer5").innerText);
+
+    //alert(game);
+	
+	if(!isNaN(nombre1) && !isNaN(nombre2) && !isNaN(nombre3) && !isNaN(nombre4) && !isNaN(nombre5))
+    {
+
+        switch (game) {
+            case "-+":
+                checkCroissant(nombre1, nombre2, nombre3, nombre4, nombre5, min, max);
+                break;
+            case "+-":
+                checkDecroissant(nombre1, nombre2, nombre3, nombre4, nombre5, min, max)
+                break;
+        }
+               
+	}
+
+}
+
+function checkCroissant(nombre1, nombre2, nombre3, nombre4, nombre5 ,min, max)
+{
+
+    if (nombre1 < nombre2 && nombre2 < nombre3 && nombre3 < nombre4 && nombre4 < nombre5) {
+
+        displayAfterGoodAnswer2();
+
+        numberGoodAnswer++;
+        numberTotalAnswer++;
+
+        afficheNumberGoodAnswer();
+
+        setTimeout(load_game_mathCroissant, 2000, min, max);
+    }
+    else {
+
+        displayAfterBadAnswer2();
+
+        numberTotalAnswer++;
+
+        afficheNumberGoodAnswer();
+
+        setTimeout(load_game_mathCroissant, 2000, min, max);
+    }
+
+}
+
+function checkDecroissant(nombre1, nombre2, nombre3, nombre4, nombre5, min, max)
+{
+    if (nombre1 > nombre2 && nombre2 > nombre3 && nombre3 > nombre4 && nombre4 > nombre5) {
+
+        displayAfterGoodAnswer2();
+
+        numberGoodAnswer++;
+        numberTotalAnswer++;
+
+        afficheNumberGoodAnswer();
+
+        setTimeout(load_game_mathCroissant, 2000, min, max);
+    }
+    else {
+
+        displayAfterBadAnswer2();
+
+        numberTotalAnswer++;
+
+        afficheNumberGoodAnswer();
+
+        setTimeout(load_game_mathCroissant, 2000, min, max);
+    }
+
+}
+
+function displayAfterGoodAnswer2()
+{
+	
+	document.getElementById("div_message_user").style.display = "block";
+	document.getElementById("div_message_user").style.backgroundImage = "url('images/crochet_vert.png')";
+	
+	playSoundGoodAnswer();
+}
+
+function displayAfterBadAnswer2()
+{
+	
+	document.getElementById("div_message_user").style.display = "block";
+	document.getElementById("div_message_user").style.backgroundImage = "url('images/x_rouge.svg')";
+	
+	playSoundBadAnswer();	
 	
 }
 
 
 
+/*--------------------------------------drag and drop and switch-------------------------------------*/
+
+function allowDrop(ev)
+{
+	ev.preventDefault();
+}
+
+function drag(ev)
+{
+	ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev)
+{
+    var noDivAnswer = ev.target.id; 
+	
+    if (document.getElementById(noDivAnswer).innerHTML == "") {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    else
+    {
+
+        ev.preventDefault();
+        var data = document.getElementById(ev.dataTransfer.getData("text"));
+        var dataParent = data.parentNode;
+        var tgt = ev.currentTarget.firstElementChild;
+
+        ev.currentTarget.replaceChild(data, tgt);
+        dataParent.appendChild(tgt);
+
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
