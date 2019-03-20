@@ -913,6 +913,24 @@ function displayAfterBadAnswer2()
 	
 }
 
+/*------------------------------------touche utiliser par utilisateur--------------------------------*/ 
+
+function toucheUtilisateurMotOrthographe(event)
+{
+
+   // var chCode = ('charCode' in event) ? event.charCode : event.keyCode;
+    var x = event.charCode || event.keyCode; //unicode
+    var y = String.fromCharCode(x);
+
+   
+
+    answer = answer + y;
+
+    document.getElementById("motUser").innerHTML = answer;
+
+   // alert(x);
+}
+
 
 
 /*--------------------------------------drag and drop and switch-------------------------------------*/
