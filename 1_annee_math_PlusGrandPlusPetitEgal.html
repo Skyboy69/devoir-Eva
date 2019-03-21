@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="fr" style="background-color:black">
+
+	<div id="left"></div>
+	<div id="right"></div>
+	<div id="top"></div>
+	<div id="bottom"></div>
+
+	<head>
+	<!-- pour les caracteres speciaux (comme le É) -->
+		<meta charset="utf-8" />
+	<!-- pour changer le positionnement selon la résolution -->	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- pour activer feuille css -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	<!-- titre de l'onglet -->
+		<title>Première Année</title>
+	<!-- icon dans onglet -->
+		<!--<link rel="icon" type="image/pgn" href="image/logo.jpg">-->
+	<!-- pour activer feuille javascript -->	
+		<script language="JavaScript"  type="text/javascript"   src="script_menu_premiere.js"></script>
+	</head>
+	
+	<body ondragstart="return false;" ondrop="return false;" onload="load_page(0); load_game_mathPlusPetitPlusGranEgal(0,99,0)">
+	
+		<br/>
+	
+		<header>
+			
+			<table>
+			
+				<tr>
+				
+					<td  class="td_menu_25">
+						<a class="a_menu" href="1_annee_menu.html">Menu<br />Principal</a>
+					</td>
+					
+					<td  class="td_menu_50">
+						<h1>Première Année</h1>
+					</td>
+					
+					<td  class="td_menu_25">
+						<h3 id="compteurGoodAnswer"></h3>
+					</td>
+
+				</tr>
+
+			</table>
+		
+		</header>
+		
+		<br/>
+		
+		<section>
+			
+			<div id="screen_blackboard0">
+				
+				
+					<table class="menu">
+					
+						<tr>
+
+							<td class="td_menu_45">
+								<h1 id="nbr1" class="texteRight"></h1>
+							</td>							
+							<td class="td_menu_10">
+									<h1 id="div_message_user2"></h1>
+							</td>	
+							<td class="td_menu_45" >
+								<h1 id="nbr2" class="texteLeft"></h1>
+							</td>							
+
+						</tr>
+						<tr>
+							<td colspan=3 class="text_top">
+
+								<div class="display">
+									<!-- parametre1 = reponse du user -->
+									<!-- parametre2 = minimun dans le random-->
+									<!-- parametre3 = maximun dans le random-->
+									<!-- parametre4 = case tableau pour class(display)-->
+									<a class="border_padding" onclick="verifierPluspetitPLusGrandEgal('<',0,99,0)"> < </a>
+									<a class="border_padding" onclick="verifierPluspetitPLusGrandEgal('>',0,99,0)"> > </a>
+									<a class="border_padding" onclick="verifierPluspetitPLusGrandEgal('=',0,99,0)"> = </a>
+
+								</div>
+								
+								<div id="div_message_user"></div>
+								
+							</td>
+											
+
+						</tr>						
+
+					</table>
+
+			</div>
+		
+		<section>
+		
+		<footer>
+				<h6>
+					By SkyBoy
+				</h6>
+		</footer>		
+	
+	</body>
+</html>	
